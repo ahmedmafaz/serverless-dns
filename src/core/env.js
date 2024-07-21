@@ -111,12 +111,12 @@ const defaults = new Map(
     // primary doh upstream
     CF_DNS_RESOLVER_URL: {
       type: "string",
-      default: "https://d.adguard-dns.com/dns-query/8179e49b",
+      default: "https://mozilla.cloudflare-dns.com/dns-query",
     },
     // secondary doh upstream
     CF_DNS_RESOLVER_URL_2: {
       type: "string",
-      default: "",
+      default: "https://dns.google/dns-query",
     },
 
      // tertiary doh upstream
