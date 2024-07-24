@@ -122,7 +122,7 @@ const defaults = new Map(
      // tertiary doh upstream
     CF_DNS_RESOLVER_URL_3: {
       type: "string",
-      default: "https://doh.umbrella.com/dns-query",
+      default: "https://unfiltered.adguard-dns.com/dns-query",
     },
     // upstream recursive rethinkdns resolver running on Fly.io
     MAX_DNS_RESOLVER_URL: {
