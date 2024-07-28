@@ -122,7 +122,7 @@ const defaults = new Map(
      // tertiary doh upstream
     CF_DNS_RESOLVER_URL_3: {
       type: "string",
-      default: "https://freedns.controld.com/p0",
+      default: "https://dns10.quad9.net/dns-query",
     },
     // upstream recursive rethinkdns resolver running on Fly.io
     MAX_DNS_RESOLVER_URL: {
