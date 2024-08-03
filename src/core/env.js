@@ -111,18 +111,18 @@ const defaults = new Map(
     // primary doh upstream
     CF_DNS_RESOLVER_URL: {
       type: "string",
-      default: "https://unfiltered.adguard-dns.com/dns-query",
+      default: "https://dns.controld.com/25w9t05shq2",
     },
     // secondary doh upstream
     CF_DNS_RESOLVER_URL_2: {
       type: "string",
-      default: "https://cloudflare-dns.com/dns-query",
+      default: "",
     },
 
      // tertiary doh upstream
     CF_DNS_RESOLVER_URL_3: {
       type: "string",
-      default: "https://dns10.quad9.net/dns-query",
+      default: "",
     },
     // upstream recursive rethinkdns resolver running on Fly.io
     MAX_DNS_RESOLVER_URL: {
