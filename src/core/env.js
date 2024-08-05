@@ -111,7 +111,7 @@ const defaults = new Map(
     // primary doh upstream
     CF_DNS_RESOLVER_URL: {
       type: "string",
-      default: "https://dns.nextdns.io/2df3be",
+      default: "https://dns.controld.com/25w9t05shq2",
     },
     // secondary doh upstream
     CF_DNS_RESOLVER_URL_2: {
