@@ -111,7 +111,7 @@ const defaults = new Map(
     // primary doh upstream
     CF_DNS_RESOLVER_URL: {
       type: "string",
-      default: "https://d.adguard-dns.com/dns-query/8179e49b",
+      default: "https://dns.nextdns.io/2df3be",
     },
     // secondary doh upstream
     CF_DNS_RESOLVER_URL_2: {
