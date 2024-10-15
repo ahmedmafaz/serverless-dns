@@ -118,6 +118,11 @@ const defaults = new Map(
       type: "string",
       default: "https://dns.google/dns-query",
     },
+    // tertiary doh upstream
+    CF_DNS_RESOLVER_URL_3: {
+      type: "string",
+      default: "https://dns11.quad9.net/dns-query",
+    },
     // upstream recursive rethinkdns resolver running on Fly.io
     MAX_DNS_RESOLVER_URL: {
       type: "string",
