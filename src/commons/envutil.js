@@ -130,6 +130,12 @@ export function secondaryDohResolver() {
   return envManager.get("CF_DNS_RESOLVER_URL_2");
 }
 
+export function tertiaryDohResolver() {
+  if (!envManager) return null;
+
+  return envManager.get("CF_DNS_RESOLVER_URL_3");
+}
+
 export function cfAccountId() {
   if (!envManager) return "";
   // a secret
