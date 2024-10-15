@@ -159,7 +159,7 @@ export function dohResolvers() {
   if (isWorkers()) {
     // upstream to two resolvers on workers; since egress is free,
     // faster among the 2 should help lower tail latencies at zero-cost
-    return [primaryDohResolver(), secondaryDohResolver()];
+    return [primaryDohResolver(), secondaryDohResolver(), tertiaryDohResolver()];
   }
 
   return [primaryDohResolver()];
