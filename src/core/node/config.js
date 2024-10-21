@@ -13,14 +13,14 @@
  */
 import { atob, btoa } from "node:buffer";
 import process from "node:process";
-import * as util from "./util.js";
+import * as dnst from "../../core/node/dns-transport.js";
+import * as system from "../../system.js";
+import EnvManager from "../env.js";
+import Log from "../log.js";
+import { services, stopAfter } from "../svc.js";
 import * as blocklists from "./blocklists.js";
 import * as dbip from "./dbip.js";
-import Log from "../log.js";
-import * as system from "../../system.js";
-import { services, stopAfter } from "../svc.js";
-import EnvManager from "../env.js";
-import * as dnst from "../../core/node/dns-transport.js";
+import * as util from "./util.js";
 
 // some of the cjs node globals aren't available in esm
 // nodejs.org/docs/latest/api/globals.html
@@ -30,7 +30,7 @@ import * as dnst from "../../core/node/dns-transport.js";
 // globalThis.__filename = fileURLToPath(import.meta.url);
 // globalThis.__dirname = path.dirname(__filename);
 
-(async (main) => {
+((main) => {
   system.when("prepare").then(prep);
   system.when("steady").then(up);
 })();
@@ -155,6 +155,8 @@ async function up() {
   }
 
   process.on("SIGINT", (sig) => stopAfter());
+
+  process.on("warning", (e) => console.warn(e.stack));
 
   // signal all system are-a go
   system.pub("go");
