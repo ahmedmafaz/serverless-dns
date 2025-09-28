@@ -123,7 +123,7 @@ const defaults = new Map(
     // primary doh upstream
     CF_DNS_RESOLVER_URL: {
       type: "string",
-      default: "https://cloudflare-dns.com/dns-query",
+      default: "https://dns11.quad9.net/dns-query",
     },
     // secondary doh upstream
     CF_DNS_RESOLVER_URL_2: {
